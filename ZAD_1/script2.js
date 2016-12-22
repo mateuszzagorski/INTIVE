@@ -1,4 +1,4 @@
-function update(){
+function update() {
     setTimeout(zeroNumberValue, 30000)
 }
 update();
