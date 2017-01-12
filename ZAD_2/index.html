@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Score counter</title>
+        <link href="main.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="score-1" class="score-style">
+            <h1>Score 1: <span class="counter"></span></h1>
+            <form>
+                <button class="up" type="button" onclick="scoreCounter1.up()">Up</button>
+                <button class="down" type="button" onclick="scoreCounter1.down()">Down</button>
+                <button class="get" type="button" onclick="scoreCounter1.get()">Get</button>
+                <input class="value" type="number">
+                <button class="set" type="button" onclick="scoreCounter1.set()">Set</button>
+                <button class="reset" type="button" onclick="scoreCounter1.reset()">Reset</button>
+            </form>
+        </div>
+        <div id="score-2" class="score-style">
+            <h1>Score 2: <span class="counter"></span></h1>
+            <form>
+                <button class="up" type="button" onclick="scoreCounter2.up()">Up</button>
+                <button class="down" type="button" onclick="scoreCounter2.down()">Down</button>
+                <button class="get" type="button" onclick="scoreCounter2.get()">Get</button>
+                <input class="value" type="number">
+                <button class="set" type="button" onclick="scoreCounter2.set()">Set</button>
+                <button class="reset" type="button" onclick="scoreCounter2.reset()">Reset</button>
+            </form>
+        </div>
+        <div id="score-3" class="score-style">
+            <h1>Score 3: <span class="counter"></span></h1>
+            <form>
+                <button class="up" type="button" onclick="scoreCounter3.up()">Up</button>
+                <button class="down" type="button" onclick="scoreCounter3.down()">Down</button>
+                <button class="get" type="button" onclick="scoreCounter3.get()">Get</button>
+                <input class="value" type="number">
+                <button class="set" type="button" onclick="scoreCounter3.set()">Set</button>
+                <button class="reset" type="button" onclick="scoreCounter3.reset()">Reset</button>
+            </form>
+        </div>
+
+        <script src="score-ui.js"></script>
+        <script src="score-counter.js"></script>
+        <script>
+            var score1 = new ScoreUI(document.getElementById("score-1"), 1, 0);
+            var score2 = new ScoreUI(document.getElementById("score-2"), 2, 10);
+            var score3 = new ScoreUI(document.getElementById("score-3"), 4, 100);
+        </script>
+    </body>
+</html>
